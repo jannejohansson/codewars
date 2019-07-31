@@ -25,6 +25,7 @@ namespace Codewars.Tests
         [InlineData(225, 5)]
         [InlineData(1071225, 45)]
         [InlineData(91716553919377, -1)]
+        [InlineData(2092188688064400026, 53785)]
         public void BuildAPileOfCubes(long m, long expected)
         {
             var actual = Kata.BuildAPileOfCubes(m);

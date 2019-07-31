@@ -20,16 +20,13 @@ namespace Codewars
 
         public static long BuildAPileOfCubes(long m)
         {
-            var n = 1;
-            long volume = 0;
+            // Nicomachus's theorem
+            double n = -0.5 + Math.Sqrt(0.25 + 2 * Math.Sqrt(m));
 
-            while (volume < m)
-            {
-                volume += n * n * n;
-                n++;
-            }
+            var isInteger = (n % 1 == 0);
 
-            return (volume == m) ? n - 1 : -1;
+            return isInteger ? (long)n : -1;
+
         }
     }
 }
