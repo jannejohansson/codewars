@@ -17,5 +17,19 @@ namespace Codewars
             }
             return Convert.ToInt32(result);
         }
+
+        public static long BuildAPileOfCubes(long m)
+        {
+            var n = 1;
+            long volume = 0;
+
+            while (volume < m)
+            {
+                volume += n * n * n;
+                n++;
+            }
+
+            return (volume == m) ? n - 1 : -1;
+        }
     }
 }

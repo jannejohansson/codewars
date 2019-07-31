@@ -16,5 +16,22 @@ namespace Codewars.Tests
 
             Assert.Equal(expected, actual);
         }
+
+        [Theory]
+        [InlineData(9, 2)]
+        [InlineData(36, 3)]
+        [InlineData(37, -1)]
+        [InlineData(100, 4)]
+        [InlineData(225, 5)]
+        [InlineData(1071225, 45)]
+        [InlineData(91716553919377, -1)]
+        public void BuildAPileOfCubes(long m, long expected)
+        {
+            var actual = Kata.BuildAPileOfCubes(m);
+
+            Assert.Equal(expected, actual);
+        }
+
+
     }
 }
